@@ -63,7 +63,7 @@ body {
 }
 
 #seccion1 {
-    background-image: url("/img/Grupo 9213.webp");
+    background-image: url("img/Grupo 9213.webp");
     background-repeat: no-repeat;
     background-position: top center;
     height: 800px;
@@ -172,7 +172,7 @@ body {
 }
 
 
-#partecuadricula{
+#parteCuadricula{
     display: flex;
     flex-direction: column;
     align-items: center;
