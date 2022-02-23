@@ -1,10 +1,23 @@
+
+:root {
+    --blue: #007fff;
+    --blue-light: #00b1ff;
+    --blue-lighter: #1489ff;
+    --blue-darker: #0073e6;
+    --blue-dark: #002b39;
+    --gray-border: #dfeaf0;
+    --gray-shadow: rgba(153, 176, 190, 0.35);
+    --white-light: #f0faff;
+}
+
+
 html {
     font-family: Hind;
     color: #002B39;
 }
 
 h1, h2 {
-    font-size: 45px;
+    font-size: 35px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -30,22 +43,30 @@ p {
     font-stretch: normal;
     font-style: normal;
     text-align: center;
+    
 }
 
 button {
-    color: #fff;
-    box-shadow: 0 9px 12px 0 rgba(153, 176, 190, 0.35);
-    background-image: linear-gradient(to top, #007fff, #00b1ff -10%);
+    background-image: linear-gradient(to top, var(--blue), var(--blue-light) -10%);
+    display: block;
     border: 0;
     border-radius: 5px;
-    padding: 15px 45px 11px 46px;
-    display: block;
-    margin: auto;
+    box-shadow: 0 9px 12px 0 var(--gray-shadow);
+    color: white;
     cursor: pointer;
+    padding: 15px 45px 11px 46px;
+    margin: auto;
     font-size: 18px;
-    font-weight: bold;
-    height: 62px;
+    font-weight: 700;
 }
+
+
+footer {
+    background-image: linear-gradient(90deg, var(--blue-lighter) 0%, var(--blue-darker) 100%);
+    padding: 40px 140px;
+}
+
+
 button:hover{
     color: blue;
     background: white;
@@ -53,6 +74,7 @@ button:hover{
 
 body {
     margin: 0;
+    font-family: "Hind", sans-serif;
 }
 
 #logoVenn {
@@ -67,6 +89,7 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     height: 800px;
+    display: block;
 }
 
 #tarjeta {
@@ -81,6 +104,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
     grid-template-rows: 50px 30px;
+    
 }
 
 #tarjeta >img{
@@ -103,6 +127,8 @@ body {
     grid-row: 2;
     grid-column: 2;
     margin: 0;
+    font-size: 18px;
+    text-align: left;
 }
 
 .estrellas{
@@ -111,11 +137,18 @@ body {
     max-height: 20px;
 }
 
+#tarjeta > h3{
+    font-size: 27px;
+    margin: 18px 0px;
+}
+
 .boldtext{
     font-weight: bolder;
 }
 
-
+.Tarjetamasflechas{
+    display:inline-block;
+}
 
 #tarjetas {    
     display: flex;
@@ -180,10 +213,15 @@ body {
 }
 
 .intentoCuadricula{
-    display: flex; 
-    gap: 30px;
+    display: grid; 
+    column-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 30px;
+    row-gap: 1rem;
 }
+
+
+
 
 .cuadrito-individual{
     text-align: center;
@@ -207,32 +245,54 @@ body {
     margin-top: 50px;
 }
 
-#footer{
+.footerarriba {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-image: linear-gradient(to top, #007fff, #00b1ff -10%);
-    padding: 0 220px 0 220px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+.footerarriba > div {
+    flex: 1
 }
 
-.footernewimag{
+.socialmedia {
+    text-align: end;
+    padding-top: 30px;
+}
+
+.socialmedia > img {
+    padding-left: 25px;
+}
+.footerarriba{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
 }
 
-.socialmedia img{
-    margin: 10px;
+
+
+
+.terminos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 42px;
+    width: 100%;
 }
 
-.terminos{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 20px;
+.terminos > div {
+    display: grid;
+    font-size: 14px;
+    grid-column: 2;
+    grid-template-columns: auto auto auto;
+    margin-right: 0;
+    right: 0;
+    width: 100%;
 }
 
-.terminos h4{    
-    margin-left: 10px;
+.footer-text {
+    color: white;
+    font-weight: 500;
+    line-height: 1em;
+    padding-bottom: 10px;
+    text-align: end;
 }
