@@ -66,6 +66,8 @@ footer {
     padding: 40px 140px;
     width: 100%;
     margin-top: auto;
+ /*   display: block;
+    width: 100%;*/
 }
 
 
@@ -77,6 +79,7 @@ button:hover{
 body {
     margin: 0;
     font-family: "Hind", sans-serif;
+    width: 100%;
 }
 
 #logoVenn {
@@ -91,8 +94,10 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     height: 800px;
-    display: block;
+    display: flex;
     width: 100%;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #tarjeta {
@@ -107,6 +112,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
     grid-template-rows: 50px 30px;
+    border-radius: 10px;
     
 }
 
@@ -172,6 +178,46 @@ body {
     justify-content: center;
 }
 
+.onecard{
+    box-shadow: 0 25px 35px 0 rgba(26, 72, 100, 0.2);
+    border-radius: 2%;
+    background-image: linear-gradient(to bottom, #fff, #fff 76%, #f0faff);
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.onecard > img{
+    width: 237px;
+    height: 319px;
+}
+
+#tarjetasola{
+    display: block;
+
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    .onecard{ 
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #tarjetas{ 
+        display: none;
+    }
+}
+
+
+
 .tarjetaProductos >img{
     width: 237px;
     height: 319px;
@@ -182,18 +228,30 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+    #partecirculitos{ 
+        display: none;
+    }
+}
+
+
 
 .content{
     display: flex;
     flex-direction: row;
-    gap: 190px;
+    gap: 10px;
+    width: 50%;
+    justify-content: center;
 
 }
 .parteIconos{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .numeros_circulitos{
@@ -212,9 +270,11 @@ body {
     align-items: center;
     margin-top: 80px;
     margin-bottom: auto;
+    width: 100%;
 }
 #parteCuadricula > h2{
 margin-top: 100px;
+width: 100%;
 }
 
 #parteCuadricula{
@@ -242,7 +302,7 @@ margin-top: 100px;
     border-radius: 10px ;
     box-shadow: 0 20px 15px 0 rgb(26 72 100 / 10%) !important;
     border: solid 1px #c3d5e0 ;
-    width: 280px;
+    width: 100%;
     height: 130px;
 }
 
@@ -272,6 +332,7 @@ margin-top: 100px;
 .socialmedia {
     text-align: end;
     padding-top: 30px;
+    width: 100%;
 }
 
 .socialmedia > img {
@@ -304,7 +365,7 @@ margin-top: 100px;
     width: 100%;
 }
 
-.footer-text {
+.texto_footer {
     color: white;
     font-weight: 500;
     line-height: 1em;
@@ -312,6 +373,15 @@ margin-top: 100px;
     text-align: end;
 }
 
+/*
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+*/
 @media only screen and (max-width: 600px) {
     .intentoCuadricula{ 
         grid-template-columns: 1fr 1fr;
